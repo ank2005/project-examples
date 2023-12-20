@@ -1,0 +1,21 @@
+- task: JFrogMaven@1
+  inputs:
+    mavenPomFile: 'pom.xml'
+    goals: 'install'
+    artifactoryResolverService: 'jfrog'
+    targetResolveReleaseRepo: 'azure-libs-release'
+    targetResolveSnapshotRepo: 'azure-libs-snapshot'
+    artifactoryDeployService: 'jfrog'
+    targetDeployReleaseRepo: 'azure-libs-release'
+    targetDeploySnapshotRepo: 'azure-libs-snapshot'
+    collectBuildInfo: true
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
+    includeEnvVars: true
+    javaHomeOption: 'JDKVersion'
+
+- task: JFrogPublishBuildInfo@1
+  inputs:
+    artifactoryConnection: 'jfrog'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
