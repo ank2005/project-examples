@@ -21,3 +21,4 @@ steps:
     artifactoryConnection: 'jfrog'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
+    
