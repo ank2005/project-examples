@@ -1,9 +1,5 @@
 trigger:
 - main
-
-pool:
-  vmImage: ubuntu-latest
-  
 - task: JFrogMaven@1
   inputs:
     mavenPomFile: 'https://github.com/ank2005/project-examples/tree/master/maven-examples/maven-example'
