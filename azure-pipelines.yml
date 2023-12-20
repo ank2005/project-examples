@@ -1,6 +1,9 @@
+trigger:
+- master
+steps:
 - task: JFrogMaven@1
   inputs:
-    mavenPomFile: 'https://github.com/ank2005/project-examples/blob/master/maven-examples/maven-example/pom.xml'
+    mavenPomFile: 'pom.xml'
     goals: 'install'
     artifactoryResolverService: 'jfrog'
     targetResolveReleaseRepo: 'azure-libs-release'
