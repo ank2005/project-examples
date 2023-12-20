@@ -1,5 +1,3 @@
-trigger:
-- main
 - task: JFrogMaven@1
   inputs:
     mavenPomFile: 'https://github.com/ank2005/project-examples/blob/master/maven-examples/maven-example/pom.xml'
