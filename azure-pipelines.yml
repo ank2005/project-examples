@@ -1,6 +1,6 @@
 - task: JFrogMaven@1
   inputs:
-    mavenPomFile: 'pom.xml'
+    mavenPomFile: 'https://github.com/ank2005/project-examples/tree/master/maven-examples/maven-example'
     goals: 'install'
     artifactoryResolverService: 'jfrog'
     targetResolveReleaseRepo: 'azure-libs-release'
